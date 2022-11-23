@@ -3,8 +3,10 @@ import Container  from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import TextField  from "@mui/material/TextField";
+import { useState } from "react";
 
 const TextFieldComp = () => {
+    const [error, setError] = useState(false)
   return (
     <div>
         <Container>
@@ -12,11 +14,24 @@ const TextFieldComp = () => {
                 TEXT FİELD
             </Typography>
             <Box sx={{mt:4}}>
-                <TextField id="email" 
+                <TextField 
+                margin="dense"
+                id="email" 
                 label="Email" 
                 placeholder="Enter your email"
                 fullWidth
-                error={true}
+                error={error}
+                helperText={error && "Incorrect email format"}
+                />
+           
+                <TextField 
+                margin="normal"
+                id="password" 
+                label="Password" 
+                placeholder="Enter your password"
+                fullWidth
+                error={error}
+                helperText={error && "Incorrect password"}
                 />
             </Box>
         </Container>
