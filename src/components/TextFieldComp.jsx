@@ -11,8 +11,13 @@ const TextFieldComp = () => {
             <Typography variant="h4" color="error" align="center" mt={4}>
                 TEXT FİELD
             </Typography>
-            <Box>
-                <TextField/>
+            <Box sx={{mt:4}}>
+                <TextField id="email" 
+                label="Email" 
+                placeholder="Enter your email"
+                fullWidth
+                error={true}
+                />
             </Box>
         </Container>
     </div>
