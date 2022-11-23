@@ -10,7 +10,7 @@ const TextFieldComp = () => {
   return (
     <div>
         <Container>
-            <Typography variant="h4" color="error" align="center" mt={4}>
+            <Typography variant="h4" color="secondary.dark" align="center" mt={4}>
                 TEXT FİELD
             </Typography>
             <Box sx={{mt:4, textAlign:"center"}}>
@@ -36,8 +36,8 @@ const TextFieldComp = () => {
 
                 <Button 
                 variant="contained" 
-                color="warning" 
-                sx={{mt:3}}>Submit
+                color="secondary"                 
+                sx={{mt:3, bgcolor:"secondary.light" }}>Submit
                 </Button>
             </Box>
         </Container>
