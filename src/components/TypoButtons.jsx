@@ -2,6 +2,8 @@ import Typography  from "@mui/material/Typography";
 import Container  from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
 
 const TypoButtons = () => {
   return (
@@ -28,10 +30,23 @@ const TypoButtons = () => {
     </Container>
     
     <Container>
-    <Box sx={{display:"flex", flexDirection:"column", gap:"0.5rem"}}>
+    <Box sx={{
+    display:"flex", 
+    flexDirection:"column", 
+    gap:"0.5rem", 
+    /* width:"50%", */
+    alignItems:"center"}}>
+
     <Button variant="text">Text</Button>
     <Button variant="contained">Contained</Button>
     <Button variant="outlined">Outlined</Button>
+
+    <Button variant="outlined" color="error" startIcon={<DeleteIcon />}>
+        Delete
+      </Button>
+      <Button variant="contained" color="secondary" endIcon={<SendIcon />}>
+        Send
+      </Button>
     </Box>
     </Container>
     </>
